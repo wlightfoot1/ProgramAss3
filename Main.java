@@ -56,5 +56,6 @@ public class Main {
 				System.out.println("**File Not Found**");
 			}
 		print();
+		call.floyd(matrix);
 	}
 }
