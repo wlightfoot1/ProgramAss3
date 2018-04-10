@@ -32,6 +32,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws IOException{
+		Graph call = new Graph();
 		try{
 			BufferedReader readInput = new BufferedReader(new FileReader("folder/matrix.txt"));
 			String line = null;
@@ -42,7 +43,7 @@ public class Main {
 				data = line.split(",");
 				for(int col = 0; col < matrix[row].length; col++){
 					if(data[col].equals("*")){
-						int INF = Integer.MAX_VALUE;
+						int INF = 500;
 						matrix[row][col] = INF;
 					} else{
 						int val = Integer.parseInt(data[col]);
