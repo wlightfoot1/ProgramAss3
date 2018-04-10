@@ -1,4 +1,10 @@
-package outLab3.lightfoot;
+
+
+
+
+
+
+package primalgo;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -32,9 +38,11 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws IOException{
-		Graph call = new Graph();
+		Graph call = new Graph();//creates a new instance of the Graph 
+                PrimAlgo newPrim = new PrimAlgo();//creates a new instance of the Prim Algo
+                
 		try{
-			BufferedReader readInput = new BufferedReader(new FileReader("folder/matrix.txt"));
+			BufferedReader readInput = new BufferedReader(new FileReader(".\\src\\Input\\matrix.txt"));
 			String line = null;
 			System.out.println("**File Found**\n");
 			String[] data;
@@ -56,6 +64,12 @@ public class Main {
 				System.out.println("**File Not Found**");
 			}
 		print();
-		call.floyd(matrix);
+		//call.floyd(matrix);
+                
+                System.out.println("Run Prim");
+                newPrim.Algo(matrix);//calls the algo method
+                 System.out.println("End of Prim");
+                
+                
 	}
 }

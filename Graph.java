@@ -1,4 +1,4 @@
-package outLab3.lightfoot;
+package primalgo;
 
 public class Graph {
 	private static int size = 6;
@@ -23,6 +23,8 @@ public class Graph {
 		
 		//int[][] holdDist = new int[size][size];
 		
+                
+                //cycles through and assigns it to the distance
 		for(i = 0; i < size; i++){
 			for(j = 0; j < size; j++){
 				holdDist[i][j] = a[i][j];
@@ -40,6 +42,8 @@ public class Graph {
 		}
 		//print(holdDist);
 	}
+        
+        //prints the graph
 	public void print(int[][] dist){
 		for(int row = 0; row < holdDist.length; row++){
 			for(int col = 0; col < holdDist[row].length; col++){
