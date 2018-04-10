@@ -9,7 +9,7 @@ public class Graph {
 	}
 	
 	//Prims Algorithm
-	public void prims(int[] matrix){
+	public void prims(int[][] matrix){
 		
 	}
 	
@@ -17,12 +17,8 @@ public class Graph {
 	
 	//Floyd-Warshall’s Algorithm
 	public void floyd(int[][] a){
-		int i;
-		int j;
-		int k;
-		
-		//int[][] holdDist = new int[size][size];
-		
+		int i, j, k;
+
 		for(i = 0; i < size; i++){
 			for(j = 0; j < size; j++){
 				holdDist[i][j] = a[i][j];
@@ -43,7 +39,7 @@ public class Graph {
 	public void print(int[][] dist){
 		for(int row = 0; row < holdDist.length; row++){
 			for(int col = 0; col < holdDist[row].length; col++){
-				System.out.print(holdDist[row][col] + " ");
+				System.out.print(holdDist[row][col] + "\t");
 			}
 			System.out.println();
 		}

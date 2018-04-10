@@ -10,31 +10,30 @@ import java.io.IOException;
  * Program 3
  * 
  * In the input text file I ignored the first line, (A,B,C,D,E,F)
- * Used "*" for the INF in my input file
+ * Used INF(500) for the palce of "*" in my input file
  * 
  * 
  */
 
 public class Main {
 	static int[][] matrix = new int[6][6];
-	
-	//static char[] key = {'A', 'B', 'C', 'D', 'E', 'F'};
 	public static void print(){ //prints 2D Array Matrix
-		System.out.println("Matrix\n" + "-----------");
-		System.out.println("A B C D E F");
+		System.out.println("Initial Matrix\n");
+		System.out.println("A\tB\tC\tD\tE\tF");
 		for(int row = 0; row < matrix.length; row++){
 			for(int col = 0; col < matrix[row].length; col++){
-				System.out.print(matrix[row][col] + " ");
+				System.out.print(matrix[row][col] + "\t");
 			}
 			System.out.println();
 		}
-		System.out.println();
+		System.out.println("*******************************"
+				+ "**************");
 	}
 
 	public static void main(String[] args) throws IOException{
 		Graph call = new Graph();
 		try{
-			BufferedReader readInput = new BufferedReader(new FileReader("folder/matrix.txt"));
+			BufferedReader readInput = new BufferedReader(new FileReader("folder/adj graph.txt"));
 			String line = null;
 			System.out.println("**File Found**\n");
 			String[] data;
@@ -56,6 +55,6 @@ public class Main {
 				System.out.println("**File Not Found**");
 			}
 		print();
-		call.floyd(matrix);
+		call.floyd(matrix); //passing the matrix to floyd's 
 	}
 }
