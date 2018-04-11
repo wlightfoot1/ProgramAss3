@@ -34,11 +34,7 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		Graph call = new Graph();
 		try{
-
-			BufferedReader readInput = new BufferedReader(new FileReader("folder/adj graph.txt"));
-
-			//BufferedReader readInput = new BufferedReader(new FileReader(".\\src\\Input\\matrix.txt"));
-
+			BufferedReader readInput = new BufferedReader(new FileReader(".\\src\\Input\\matrix.txt"));
 			String line = null;
 			System.out.println("**File Found**\n");
 			String[] data;
@@ -60,14 +56,12 @@ public class Main {
 				System.out.println("**File Not Found**");
 			}
 		print();
-
-		call.floyd(matrix); //passing the matrix to floyd's  
+		//call.floyd(matrix); //passing the matrix to floyd's 
                 
                  PrimAlgo newPrim = new PrimAlgo();//creates a new instance of the Prim Algo
                 System.out.println("Run Prim");
                 newPrim.Algo(matrix);//calls the algo method
                  System.out.println("End of Prim");
                  //".\\src\\Input\\matrix.txt"
-
 	}
 }
