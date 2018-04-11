@@ -60,9 +60,11 @@ public class Main {
 				System.out.println("**File Not Found**");
 			}
 		print();
-
+		
+		System.out.println("Run Floyd");
 		call.floyd(matrix); //passing the matrix to floyd's  
-                
+                System.out.println("End of Floyd");
+		
                  PrimAlgo newPrim = new PrimAlgo();//creates a new instance of the Prim Algo
                 System.out.println("Run Prim");
                 newPrim.Algo(matrix);//calls the algo method
